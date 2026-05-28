@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen Recorder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Screen Recorder</h1>
+            <p class="subtitle">Record your screen and download the result as a video file.</p>
+            
+            <div class="controls">
+                <button id="startBtn" class="btn btn-primary">Start Recording</button>
+                <button id="stopBtn" class="btn btn-secondary" disabled>Stop Recording</button>
+            </div>
+
+            <div class="quality-selector">
+                <div class="selector-group">
+                    <label for="resolution">Resolution:</label>
+                    <select id="resolution" class="quality-dropdown">
+                        <option value="720">720p</option>
+                        <option value="1080" selected>1080p</option>
+                        <option value="1440">1440p</option>
+                        <option value="2160">4K (2160p)</option>
+                        <option value="4320">8K (4320p)</option>
+                    </select>
+                </div>
+                <div class="selector-group">
+                    <label for="fps">Frame Rate (FPS):</label>
+                    <select id="fps" class="quality-dropdown">
+                        <option value="24">24 fps</option>
+                        <option value="30">30 fps</option>
+                        <option value="60" selected>60 fps</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="status" class="status-message">Ready to record.</div>
+
+            <div id="download-section" style="display: none;">
+                <a id="downloadBtn" href="#" class="download-link">Download Recording</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
